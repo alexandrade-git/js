@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulado</title>
+</head>
+<body>
+    <h1>Verificar Origem</h1>
+    Digite seu país:<input type="text" name="paisv" id="paisv">
+    <input type="button" value="Verificar" onclick="calcular()">
+    <div id="res">
+    
+    </div>
+    <script>
+        function calcular() {
+            var paisve = window.document.querySelector('#paisv')
+            var res = window.document.querySelector('#res')
+            var paisver = String(paisve.value.toUpperCase())
+            
+
+            if (paisver == 'BRASIL') {
+                res.innerHTML = '<p>Você é Brasileiro !</p>'
+            }else{
+                res.innerHTML +='<p>Você é estrangeiro !</p>'
+            }
+            res.innerHTML += `<p>Você está vivendo em ${paisver}</p>`
+
+        }
+
+    </script>
+</body>
+</html>
